@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="YATO FX - Anime Editor and Logo Designer">
+
+    <title>YATO FX | Anime Editor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ================= MOBILE MENU ================= */
+
+        .menu-btn {
+            display: none;
+
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.12);
+
+            color: white;
+
+            font-size: 24px;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+        }
+
+
+        .mobile-menu {
+            display: none;
+
+            position: absolute;
+
+            top: 75px;
+            left: 15px;
+            right: 15px;
+
+            padding: 15px;
+
+            background: rgba(10,10,16,0.96);
+
+            backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.45);
+        }
+
+
+        .mobile-menu.show {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+
+        .mobile-menu a {
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 15px;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .mobile-menu a:hover {
+            background: rgba(185,140,255,0.12);
+
+            color: #b98cff;
+        }
+
+
+        @media (max-width: 700px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .mobile-menu {
+                top: 65px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <nav>
+
+        <div class="brand">
+            YATO <span>FX</span>
+        </div>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#edits">My Some Edits</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#gallery">Gallery</a>
+
+            <a href="#youtube">YouTube</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="menu-btn"
+                id="menuBtn"
+                aria-label="Open Menu">
+
+            ☰
+
+        </button>
+
+    </nav>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <div class="mobile-menu"
+         id="mobileMenu">
+
+        <a href="#about">About</a>
+
+        <a href="#edits">My Some Edits</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#gallery">Gallery</a>
+
+        <a href="#youtube">YouTube</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="welcome">
+            WELCOME TO MY PORTFOLIO
+        </p>
+
+
+        <h1>
+            YATO <span>FX</span>
+        </h1>
+
+
+        <h2>
+            An Anime Editor
+        </h2>
+
+
+        <p class="hero-description">
+
+            Turning anime moments into
+            aesthetic edits, creative visuals
+            and unique designs.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#edits"
+               class="primary-btn">
+
+                Explore My Edits
+
+            </a>
+
+
+            <a href="https://www.youtube.com/@Yato_fx_0"
+               target="_blank"
+               class="secondary-btn">
+
+                YouTube
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <div class="logo-glow"></div>
+
+        <img src="logo.png"
+             alt="YATO FX Logo">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about"
+         class="section">
+
+    <div class="section-title">
+
+        <p>WHO AM I?</p>
+
+        <h2>
+            About <span>YATO FX</span>
+        </h2>
+
+    </div>
+
+
+    <div class="about-content">
+
+
+        <div class="about-card">
+
+            <h3>
+                Anime Editor
+            </h3>
+
+            <p>
+
+                I'm YATO FX, an anime editor and
+                creative designer who loves turning
+                anime scenes into powerful and
+                aesthetic edits.
+
+            </p>
+
+            <p>
+
+                I focus on creative editing,
+                smooth visuals, effects and
+                unique designs that make every
+                project feel different.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="about-card">
+
+            <h3>
+                Creative Designer
+            </h3>
+
+            <p>
+
+                Along with editing, I also enjoy
+                creating logos and visual designs
+                with a premium and aesthetic style.
+
+            </p>
+
+            <p>
+
+                This website is a showcase of my
+                work, skills and creative journey.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EDITS ================= -->
+
+<section id="edits"
+         class="section">
+
+    <div class="section-title">
+
+        <p>MY WORK</p>
+
+        <h2>
+            My <span>Some Edits</span>
+        </h2>
+
+        <p class="subtitle">
+
+            Here are some of my anime editing projects.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="edit-grid">
+
+
+        <!-- EDIT 1 -->
+
+        <div class="edit-card">
+
+            <video controls
+                   preload="metadata">
+
+                <source src="edits/edit1.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div class="edit-details">
+
+                <span>EDIT 01</span>
+
+                <h3>
+                    Chrollo Lucifer
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EDIT 2 -->
+
+        <div class="edit-card">
+
+            <video controls
+                   preload="metadata">
+
+                <source src="edits/edit2.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div class="edit-details">
+
+                <span>EDIT 02</span>
+
+                <h3>
+                    My Girl
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EDIT 3 -->
+
+        <div class="edit-card">
+
+            <video controls
+                   preload="metadata">
+
+                <source src="edits/edit3.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div class="edit-details">
+
+                <span>EDIT 03</span>
+
+                <h3>
+                    Grimmjow
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EDIT 4 -->
+
+        <div class="edit-card">
+
+            <video controls
+                   preload="metadata">
+
+                <source src="edits/edit4.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div class="edit-details">
+
+                <span>EDIT 04</span>
+
+                <h3>
+                    Giyu Tomioka
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EDIT 5 -->
+
+        <div class="edit-card">
+
+            <video controls
+                   preload="metadata">
+
+                <source src="edits/edit5.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div class="edit-details">
+
+                <span>EDIT 05</span>
+
+                <h3>
+                    GNG Edit
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EDIT 6 -->
+
+        <div class="edit-card">
+
+            <video controls
+                   preload="metadata">
+
+                <source src="edits/edit6.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div class="edit-details">
+
+                <span>EDIT 06</span>
+
+                <h3>
+                    Itachi
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EDIT 7 -->
+
+        <div class="edit-card">
+
+            <video controls
+                   preload="metadata">
+
+                <source src="edits/edit7.mp4"
+                        type="video/mp4">
+
+            </video>
+
+            <div class="edit-details">
+
+                <span>EDIT 07</span>
+
+                <h3>
+                    Sasuke
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills"
+         class="section">
+
+    <div class="section-title">
+
+        <p>WHAT I DO</p>
+
+        <h2>
+            My <span>Skills</span>
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">
+                01
+            </div>
+
+            <div class="skill-icon">
+                🎬
+            </div>
+
+            <h3>
+                Anime Editing
+            </h3>
+
+            <p>
+
+                Anime edits, transitions,
+                motion effects, visual effects
+                and creative compositions.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-card">
+
+            <div class="skill-number">
+                02
+            </div>
+
+            <div class="skill-icon">
+                🎨
+            </div>
+
+            <h3>
+                Logo Making
+            </h3>
+
+            <p>
+
+                Creating aesthetic and premium
+                logos for creators, editors
+                and personal brands.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery"
+         class="section">
+
+    <div class="section-title">
+
+        <p>MY CREATIVE WORLD</p>
+
+        <h2>
+            Creative <span>Gallery</span>
+        </h2>
+
+        <p class="subtitle">
+
+            My logo designs and creative artworks.
+
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <!-- LOGO 1 -->
+
+        <div class="gallery-card">
+
+            <img src="logo.png"
+                 alt="YATO FX Logo">
+
+            <div class="gallery-overlay">
+
+                <h3>
+                    YATO FX
+                </h3>
+
+                <p>
+                    Brand Logo
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOGO 2 -->
+
+        <div class="gallery-card">
+
+            <img src="logo2.png"
+                 alt="YATO FX Logo 2">
+
+            <div class="gallery-overlay">
+
+                <h3>
+                    YATO FX
+                </h3>
+
+                <p>
+                    Logo Design
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOGO 3 -->
+
+        <div class="gallery-card">
+
+            <img src="logo3.png"
+                 alt="YATO FX Logo 3">
+
+            <div class="gallery-overlay">
+
+                <h3>
+                    YATO FX
+                </h3>
+
+                <p>
+                    Creative Design
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= YOUTUBE ================= -->
+
+<section id="youtube"
+         class="youtube-section">
+
+    <div class="youtube-content">
+
+        <p>
+            WATCH MY CONTENT
+        </p>
+
+
+        <h2>
+            YATO <span>FX</span>
+        </h2>
+
+
+        <p>
+
+            Anime edits, creative videos
+            and more on my YouTube channel.
+
+        </p>
+
+
+        <a href="https://www.youtube.com/@Yato_fx_0"
+           target="_blank"
+           class="youtube-btn">
+
+            ▶ Visit My YouTube
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact"
+         class="section contact-section">
+
+    <div class="section-title">
+
+        <p>LET'S CONNECT</p>
+
+        <h2>
+            Contact <span>Me</span>
+        </h2>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <h3>
+            Have a project in mind?
+        </h3>
+
+
+        <p>
+
+            Feel free to contact me for
+            editing or logo design.
+
+        </p>
+
+
+        <a href="mailto:s76944885@gmail.com"
+           class="email-btn">
+
+            📧 s76944885@gmail.com
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        YATO <span>FX</span>
+
+    </div>
+
+
+    <p>
+
+        Anime Editor • Logo Designer
+
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#edits">
+            Edits
+        </a>
+
+        <a href="#skills">
+            Skills
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 YATO FX. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+
+<script>
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    menuBtn.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("show");
+
+        if (mobileMenu.classList.contains("show")) {
+
+            menuBtn.textContent = "✕";
+
+        } else {
+
+            menuBtn.textContent = "☰";
+
+        }
+
+    });
+
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("show");
+
+            menuBtn.textContent = "☰";
+
+        });
+
+    });
+
+</script>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
