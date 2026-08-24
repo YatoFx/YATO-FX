@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     color: #f7f3ff;
@@ -28,9 +22,7 @@ body::before {
         radial-gradient(circle at 90% 75%, rgba(102, 57, 208, 0.10), transparent 30%);
 }
 
-a {
-    color: inherit;
-}
+a { color: inherit; }
 
 header {
     position: sticky;
@@ -140,9 +132,7 @@ h1 span,
     gap: 70px;
 }
 
-.hero-content {
-    max-width: 600px;
-}
+.hero-content { max-width: 600px; }
 
 .welcome,
 .section-title > p:first-child,
@@ -217,9 +207,7 @@ h1 span,
     color: white;
 }
 
-.secondary-btn:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
+.secondary-btn:hover { background: rgba(255, 255, 255, 0.08); }
 
 .hero-image {
     position: relative;
@@ -252,9 +240,7 @@ h1 span,
     padding: 105px 0;
 }
 
-.section-title {
-    margin-bottom: 42px;
-}
+.section-title { margin-bottom: 42px; }
 
 .section-title h2 {
     margin-top: 9px;
@@ -325,6 +311,8 @@ h1 span,
     line-height: 1.85;
 }
 
+/* EDIT CARDS: 3 ON LAPTOP */
+
 .edit-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -381,9 +369,7 @@ h1 span,
     font-weight: 700;
 }
 
-.skill-icon {
-    font-size: 36px;
-}
+.skill-icon { font-size: 36px; }
 
 .skill-card h3 {
     margin-top: 22px;
@@ -416,9 +402,7 @@ h1 span,
     transition: transform 0.4s ease;
 }
 
-.gallery-card:hover img {
-    transform: scale(1.06);
-}
+.gallery-card:hover img { transform: scale(1.06); }
 
 .gallery-overlay {
     position: absolute;
@@ -427,9 +411,7 @@ h1 span,
     background: linear-gradient(transparent, rgba(5, 5, 10, 0.95));
 }
 
-.gallery-overlay h3 {
-    font-size: 20px;
-}
+.gallery-overlay h3 { font-size: 20px; }
 
 .gallery-overlay p {
     margin-top: 4px;
@@ -471,14 +453,22 @@ h1 span,
     background: #ff3657;
 }
 
+/* CONTACT: HEADING + GMAIL CARD CENTER */
+
 .contact-section {
     padding-top: 20px;
+    text-align: center;
+}
+
+.contact-section .section-title {
+    text-align: center;
 }
 
 .contact-card {
-    max-width: 690px;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    width: min(100%, 700px);
+    max-width: 700px;
+    margin: 0 auto;
     padding: 38px;
     text-align: center;
 }
