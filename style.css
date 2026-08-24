@@ -13,7 +13,7 @@ html {
 body {
     background: #090910;
     color: #f6f3ff;
-    font-family: "Poppins", sans-serif;
+    font-family: Poppins, sans-serif;
     overflow-x: hidden;
 }
 
@@ -21,11 +21,11 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
+    z-index: -1;
     pointer-events: none;
     background:
         radial-gradient(circle at 10% 15%, rgba(145, 83, 255, 0.12), transparent 28%),
         radial-gradient(circle at 90% 75%, rgba(102, 57, 208, 0.10), transparent 30%);
-    z-index: -1;
 }
 
 a {
@@ -36,7 +36,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(9, 9, 16, 0.86);
+    background: rgba(9, 9, 16, 0.88);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
@@ -69,8 +69,8 @@ h1 span,
 
 .nav-links {
     display: flex;
-    align-items: center;
     gap: 24px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -78,24 +78,22 @@ h1 span,
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.25s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.footer-links a:hover {
     color: #b98cff;
 }
 
-/* MOBILE MENU */
-
 .menu-btn {
     display: none;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white;
-    font-size: 24px;
     width: 45px;
     height: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
+    background: transparent;
+    color: white;
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -119,28 +117,26 @@ h1 span,
 }
 
 .mobile-menu a {
-    color: white;
-    text-decoration: none;
     padding: 13px 14px;
     border-radius: 10px;
+    color: white;
+    text-decoration: none;
 }
 
 .mobile-menu a:hover {
-    background: rgba(185, 140, 255, 0.13);
     color: #b98cff;
+    background: rgba(185, 140, 255, 0.13);
 }
-
-/* HERO */
 
 .hero {
     width: min(1180px, calc(100% - 40px));
     min-height: 630px;
     margin: auto;
+    padding: 80px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 70px;
-    padding: 80px 0;
 }
 
 .hero-content {
@@ -199,28 +195,17 @@ h1 span,
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .primary-btn {
-    background: #b98cff;
     color: #160d26;
+    background: #b98cff;
     box-shadow: 0 12px 30px rgba(185, 140, 255, 0.25);
 }
 
-.primary-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 36px rgba(185, 140, 255, 0.38);
-}
-
 .secondary-btn {
-    color: white;
     border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.secondary-btn:hover {
-    transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.08);
+    color: white;
 }
 
 .hero-image {
@@ -248,8 +233,6 @@ h1 span,
     opacity: 0.35;
 }
 
-/* GENERAL SECTIONS */
-
 .section {
     width: min(1180px, calc(100% - 40px));
     margin: auto;
@@ -275,9 +258,8 @@ h1 span,
     line-height: 1.7;
 }
 
-/* ABOUT */
-
-.about-content {
+.about-content,
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
@@ -310,8 +292,6 @@ h1 span,
     line-height: 1.85;
 }
 
-/* EDIT VIDEOS */
-
 .edit-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 360px));
@@ -324,19 +304,13 @@ h1 span,
     width: 100%;
     overflow: hidden;
     border-radius: 18px;
-    transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.edit-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(185, 140, 255, 0.5);
 }
 
 .edit-card video {
     display: block;
     width: 100%;
-    height: auto;
     max-width: 100%;
+    height: auto;
     background: #000;
 }
 
@@ -355,14 +329,6 @@ h1 span,
     margin-top: 6px;
     font-size: 18px;
     font-weight: 600;
-}
-
-/* SKILLS */
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
 }
 
 .skill-card {
@@ -393,14 +359,11 @@ h1 span,
 }
 
 .skill-card p {
-    max-width: 370px;
     margin-top: 12px;
     color: rgba(255, 255, 255, 0.62);
     font-size: 14px;
     line-height: 1.8;
 }
-
-/* GALLERY */
 
 .gallery-grid {
     display: grid;
@@ -410,22 +373,17 @@ h1 span,
 
 .gallery-card {
     position: relative;
-    overflow: hidden;
     min-height: 310px;
+    overflow: hidden;
     border-radius: 20px;
 }
 
 .gallery-card img {
+    display: block;
     width: 100%;
     height: 100%;
     min-height: 310px;
-    display: block;
     object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.gallery-card:hover img {
-    transform: scale(1.06);
 }
 
 .gallery-overlay {
@@ -445,8 +403,6 @@ h1 span,
     font-size: 13px;
 }
 
-/* YOUTUBE */
-
 .youtube-section {
     width: min(1180px, calc(100% - 40px));
     margin: 20px auto 100px;
@@ -454,9 +410,7 @@ h1 span,
     text-align: center;
     border: 1px solid rgba(185, 140, 255, 0.28);
     border-radius: 26px;
-    background:
-        radial-gradient(circle at 50% 0%, rgba(169, 113, 255, 0.2), transparent 55%),
-        linear-gradient(145deg, #191128, #0d0d16);
+    background: linear-gradient(145deg, #191128, #0d0d16);
 }
 
 .youtube-content {
@@ -479,17 +433,9 @@ h1 span,
 
 .youtube-btn {
     margin-top: 28px;
-    background: #ff3657;
     color: white;
-    box-shadow: 0 12px 28px rgba(255, 54, 87, 0.22);
+    background: #ff3657;
 }
-
-.youtube-btn:hover {
-    transform: translateY(-3px);
-    background: #ff1d43;
-}
-
-/* CONTACT */
 
 .contact-section {
     padding-top: 20px;
@@ -517,13 +463,6 @@ h1 span,
     border: 1px solid rgba(185, 140, 255, 0.45);
     background: rgba(185, 140, 255, 0.09);
 }
-
-.email-btn:hover {
-    transform: translateY(-3px);
-    background: rgba(185, 140, 255, 0.18);
-}
-
-/* FOOTER */
 
 footer {
     margin-top: 100px;
@@ -553,17 +492,11 @@ footer > p {
     text-decoration: none;
 }
 
-.footer-links a:hover {
-    color: #b98cff;
-}
-
 .copyright {
     margin-top: 28px;
     color: rgba(255, 255, 255, 0.38);
     font-size: 12px;
 }
-
-/* MOBILE */
 
 @media (max-width: 700px) {
     nav {
@@ -587,9 +520,9 @@ footer > p {
     .hero {
         width: min(100% - 36px, 1180px);
         min-height: auto;
+        padding: 68px 0 65px;
         flex-direction: column;
         gap: 38px;
-        padding: 68px 0 65px;
         text-align: center;
     }
 
