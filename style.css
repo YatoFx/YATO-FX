@@ -32,8 +32,6 @@ a {
     color: inherit;
 }
 
-/* NAVBAR */
-
 header {
     position: sticky;
     top: 0;
@@ -130,8 +128,6 @@ h1 span,
     color: #b98cff;
     background: rgba(185, 140, 255, 0.13);
 }
-
-/* HERO */
 
 .hero {
     width: min(1180px, calc(100% - 40px));
@@ -250,8 +246,6 @@ h1 span,
     opacity: 0.35;
 }
 
-/* GENERAL SECTIONS */
-
 .section {
     width: min(1180px, calc(100% - 40px));
     margin: auto;
@@ -277,8 +271,6 @@ h1 span,
     line-height: 1.7;
 }
 
-/* ALL INFORMATION CARDS */
-
 .about-content,
 .skills-grid {
     display: grid;
@@ -301,10 +293,7 @@ h1 span,
         rgba(255, 255, 255, 0.025)
     );
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover,
@@ -319,8 +308,6 @@ h1 span,
         0 0 42px rgba(132, 70, 255, 0.25),
         0 20px 45px rgba(0, 0, 0, 0.34);
 }
-
-/* ABOUT */
 
 .about-card {
     padding: 32px;
@@ -337,8 +324,6 @@ h1 span,
     font-size: 14px;
     line-height: 1.85;
 }
-
-/* EDIT VIDEOS - 3 IN ONE ROW */
 
 .edit-grid {
     display: grid;
@@ -381,8 +366,6 @@ h1 span,
     color: #dcc8ff;
 }
 
-/* SKILLS */
-
 .skill-card {
     min-height: 260px;
     padding: 32px;
@@ -413,8 +396,6 @@ h1 span,
     font-size: 14px;
     line-height: 1.8;
 }
-
-/* GALLERY */
 
 .gallery-grid {
     display: grid;
@@ -456,8 +437,6 @@ h1 span,
     font-size: 13px;
 }
 
-/* YOUTUBE */
-
 .youtube-section {
     width: min(1180px, calc(100% - 40px));
     margin: 20px auto 100px;
@@ -492,15 +471,16 @@ h1 span,
     background: #ff3657;
 }
 
-/* CONTACT */
-
 .contact-section {
     padding-top: 20px;
 }
 
 .contact-card {
     max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 38px;
+    text-align: center;
 }
 
 .contact-card h3 {
@@ -519,8 +499,6 @@ h1 span,
     border: 1px solid rgba(185, 140, 255, 0.45);
     background: rgba(185, 140, 255, 0.09);
 }
-
-/* FOOTER */
 
 footer {
     margin-top: 100px;
@@ -556,16 +534,12 @@ footer > p {
     font-size: 12px;
 }
 
-/* TABLET */
-
 @media (max-width: 900px) {
     .edit-grid {
         grid-template-columns: repeat(2, minmax(0, 360px));
         justify-content: center;
     }
 }
-
-/* PHONE */
 
 @media (max-width: 700px) {
     nav {
