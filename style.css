@@ -11,9 +11,9 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     color: #f7f3ff;
     background: #090910;
+    font-family: "Poppins", sans-serif;
     overflow-x: hidden;
 }
 
@@ -83,7 +83,8 @@ h1 span,
     transition: color 0.25s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.footer-links a:hover {
     color: #b98cff;
 }
 
@@ -276,9 +277,10 @@ h1 span,
     line-height: 1.7;
 }
 
-/* ABOUT */
+/* ALL INFORMATION CARDS */
 
-.about-content {
+.about-content,
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
@@ -289,18 +291,39 @@ h1 span,
 .gallery-card,
 .edit-card,
 .contact-card {
+    position: relative;
+    overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
     background: linear-gradient(
         145deg,
         rgba(255, 255, 255, 0.075),
         rgba(255, 255, 255, 0.025)
     );
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+.about-card:hover,
+.skill-card:hover,
+.gallery-card:hover,
+.edit-card:hover,
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(185, 140, 255, 0.85);
+    box-shadow:
+        0 0 18px rgba(185, 140, 255, 0.30),
+        0 0 42px rgba(132, 70, 255, 0.25),
+        0 20px 45px rgba(0, 0, 0, 0.34);
+}
+
+/* ABOUT */
 
 .about-card {
     padding: 32px;
-    border-radius: 20px;
 }
 
 .about-card h3 {
@@ -315,7 +338,7 @@ h1 span,
     line-height: 1.85;
 }
 
-/* EDITS */
+/* EDIT VIDEOS - 3 IN ONE ROW */
 
 .edit-grid {
     display: grid;
@@ -325,41 +348,10 @@ h1 span,
 }
 
 .edit-card {
-    position: relative;
-    overflow: hidden;
     border-radius: 18px;
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.edit-card::before {
-    content: "";
-    position: absolute;
-    inset: -4px;
-    z-index: 0;
-    border-radius: 22px;
-    background: linear-gradient(135deg, #b98cff, #713cd0, #b98cff);
-    filter: blur(17px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.edit-card:hover {
-    transform: translateY(-9px);
-    border-color: rgba(185, 140, 255, 0.9);
-    box-shadow: 0 20px 45px rgba(145, 85, 255, 0.35);
-}
-
-.edit-card:hover::before {
-    opacity: 0.8;
 }
 
 .edit-card video {
-    position: relative;
-    z-index: 1;
     display: block;
     width: 100%;
     height: auto;
@@ -368,8 +360,6 @@ h1 span,
 }
 
 .edit-details {
-    position: relative;
-    z-index: 1;
     padding: 18px 19px 20px;
     background: rgba(15, 12, 24, 0.96);
 }
@@ -393,18 +383,9 @@ h1 span,
 
 /* SKILLS */
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
 .skill-card {
-    position: relative;
     min-height: 260px;
     padding: 32px;
-    overflow: hidden;
-    border-radius: 20px;
 }
 
 .skill-number {
@@ -442,10 +423,7 @@ h1 span,
 }
 
 .gallery-card {
-    position: relative;
     min-height: 310px;
-    overflow: hidden;
-    border-radius: 20px;
 }
 
 .gallery-card img {
@@ -523,7 +501,6 @@ h1 span,
 .contact-card {
     max-width: 690px;
     padding: 38px;
-    border-radius: 22px;
 }
 
 .contact-card h3 {
